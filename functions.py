@@ -30,3 +30,12 @@ def average(num1, num2):
 
 avg = average(2, 2)
 print(avg)
+
+
+# **********
+def gimme(name):
+    return('Hello {}'.format(name))
+
+
+greeting = gimme('Gavin')
+print(greeting)
