@@ -1,7 +1,7 @@
 
 def github_auto():
     import os
-    from git import Repo
+    # from git import Repo
     branch = os.system("git rev-parse --abbrev-ref HEAD")
     commit = raw_input('Commit Message? ')
     print(commit)
