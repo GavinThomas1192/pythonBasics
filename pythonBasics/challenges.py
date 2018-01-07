@@ -37,12 +37,27 @@
 # start_movie()
 
 # this works
-import sys
-def start_movie():
-    answer = input("Do you want to start the movie? ")
-    if answer == 'n' or answer == 'N':
-         sys.exit()
-    else:
-        print("Enjoy the show!")
+# import sys
+# def start_movie():
+#     answer = input("Do you want to start the movie? ")
+#     if answer == 'n' or answer == 'N':
+#          sys.exit()
+#     else:
+#         print("Enjoy the show!")
 
-start_movie()
+# start_movie()
+
+import random
+start = 5
+def even_odd(num):
+    # If % 2 is 0, the number is even.
+    # Since 0 is falsey, we have to invert it with not.
+    return not num % 2
+
+while start:
+    random_number = random.randint(1, 99)
+    if even_odd(random_number):
+        print("{} is even".format(random_number))
+    else:
+        print("{} is odd".format(random_number))
+    start -= 1
