@@ -16,11 +16,33 @@
 
 # print(works, not_works)
 
-import random
-def random_item(ite):
-    random_number = random.randint(0, (len(ite) - 1))
-    return ite[random_number]
+# import random
+# def random_item(ite):
+#     random_number = random.randint(0, (len(ite) - 1))
+#     return ite[random_number]
 
 
 
-random_item(['hi', 'hi', 'hi'])
+# random_item(['hi', 'hi', 'hi'])
+
+# this does not
+# import sys
+# def start_movie():
+#     answer = input("Do you want to start the movie? ")
+#     if answer != 'n' or answer != 'N':
+#         print("Enjoy the show!")
+#     else:
+#          sys.exit()
+
+# start_movie()
+
+# this works
+import sys
+def start_movie():
+    answer = input("Do you want to start the movie? ")
+    if answer == 'n' or answer == 'N':
+         sys.exit()
+    else:
+        print("Enjoy the show!")
+
+start_movie()
