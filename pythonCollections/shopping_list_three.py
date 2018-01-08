@@ -17,6 +17,7 @@ def show_help():
 Enter 'DONE' to stop adding items.
 Enter 'HELP' to show available commands.
 Enter 'SHOW' to see your current list. 
+Enter 'REMOVE' to delete an item from your list. 
 """)
 
 
@@ -32,6 +33,7 @@ def show_list():
 
 def add_new_item(item):
     show_list()
+    show_help()
     if len(shopping_list):
         position =  input("Where should I add {}?\n"
                             "Press ENTER to the end of the list\n"
@@ -50,7 +52,16 @@ def add_new_item(item):
     
     show_list()
 
-# show_list()
+def remove_item():
+    show_list()
+    item_to_delete = input("Which Item do you want to delete? ")
+    try:
+        shopping_list.remove(item_to_delete)
+    except ValueError:
+        pass
+    show_list()
+
+
 show_help()
 
 while True:
@@ -63,6 +74,10 @@ while True:
         continue
     elif new_item.upper() == "SHOW":
         show_list()
+        continue
+    elif new_item.upper() == "REMOVE":
+        remove_item()
+        show_list
         continue
     add_new_item(new_item)
    
