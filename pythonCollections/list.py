@@ -5,6 +5,7 @@ fav_things += ["Warm woolen mittens"]
 
 # adds new item to list
 fav_things.append("guns")
+fav_things.append(3, 4)
 # adds new item inside another list to original list 
 fav_things.append(["beer"])
 # adds new item to the list inside original list
